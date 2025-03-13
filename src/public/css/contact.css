@@ -1,0 +1,188 @@
+body {
+    font-family: 'Inika';
+    color: #8B7969;
+}
+
+a {
+    font-family: 'Inika';
+    text-decoration: none;
+    cursor: pointer;
+    color: #8B7969;
+}
+
+button {
+    font-family: 'Inika', serif;
+}
+
+.header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header__inner {
+    max-width: 1512px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.header__logo {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 40px;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 70%;
+}
+
+.form-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.common {
+    background: #F4F4F4;
+    height: 38px;
+    border: none;
+    padding: 0 25px;
+    width: 100%;
+    font-family: 'Inika';
+    color: #BEB1A6;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-item__input {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    background: #F4F4F4;
+    height: 38px;
+    border: none;
+    padding: 0 25px;
+    width: 46%;
+    font-family: 'Inika';
+    color: #BEB1A6;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-item__gender {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.gender-label {
+    display: block;
+    width: 25%;
+}
+
+.radio-button:checked {
+    background: #8B7969;
+}
+
+.tel {
+    background: #F4F4F4;
+    height: 38px;
+    border: none;
+    padding: 0 25px;
+    width: 30%;
+    font-family: 'Inika';
+    color: #BEB1A6;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+select {
+    height: 38px;
+    background: #F4F4F4;
+    border: none;
+    padding: 0 25px;
+    appearance: none;
+    width: 100%;
+    font-family: 'Inika';
+    color: #BEB1A6;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.select::after {
+    content: '▼';
+    font-size: 20px;
+    color: #BEB1A6;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(1.5);
+}
+
+.form-item__textarea {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 129px;
+    background: #F4F4F4;
+    border: none;
+    padding: 15px 25px;
+    font-family: 'Inika';
+    color: #BEB1A6;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.required {
+    color: #FF9494;
+}
+
+.form-item__button {
+    text-align: center;
+    padding: 10px 40px;
+    margin-top: 10px
+}
+
+.button__submit {
+    width: 160px;
+    height: 46px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inika';
+    color: #FFFFFF;
+    background: #82756A;
+    border: none;
+}

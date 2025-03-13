@@ -1,0 +1,120 @@
+body {
+    font-family: 'Inika';
+    color: #8B7969;
+}
+
+button {
+    font-family: 'Inika';
+}
+
+.header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header__inner {
+    max-width: 1512px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.header__logo {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Inika';
+    text-decoration: none;
+    cursor: pointer;
+    color: #8B7969;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 40px;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 70%;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #E0DFDE;
+}
+
+th {
+    padding: 20px 50px;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #BAA899;
+}
+
+th, td {
+    border-bottom: 1px solid #E0DFDE;
+}
+
+input {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #8B7969;
+    padding: 0 40px;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #8B7969;
+    padding: 0 40px;
+}
+
+.form-button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.button__submit {
+    width: 120px;
+    height: 42px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inika';
+    color: #FFFFFF;
+    background: #82756A;
+    border: none;
+}
+
+.back-buttony {
+    transform: translateX(60%) translateY(-120%);
+}
+
+.button__modify {
+    font-family: 'Inika';
+    cursor: pointer;
+    color: #8B7969;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}

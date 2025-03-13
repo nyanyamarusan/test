@@ -1,0 +1,48 @@
+body {
+    font-family: 'Inika';
+    color: #8B7969;
+}
+
+.content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column;
+}
+
+.thanks {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.thanks::before {
+    content: "Thank you";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 280px;
+    color: rgba(139, 121, 105, 0.05);
+    z-index: -1;
+    font-weight: 400;
+    white-space: nowrap;
+    display: block;
+}
+
+a {
+    font-family: 'Inika';
+    text-decoration: none;
+    cursor: pointer;
+    background: #8B7969;
+    color: #FFFFFF;
+    border: 1px solid #8B7969;
+    padding: 10px 40px;
+}
+
+.home-button {
+    margin-top: 10px;
+}
