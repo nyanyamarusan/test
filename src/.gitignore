@@ -3,10 +3,13 @@
 /public/build
 /public/hot
 /public/storage
-/storage/logs/*
-/storage/framework/*
-/storage/*.key
-/storage/pail
+/storage/*
+!/storage/framework
+!/storage/framework/cache
+!/storage/framework/data
+!/storage/framework/sessions
+!/storage/framework/views
+!/storage/logs
 /vendor
 .env
 .env.backup
