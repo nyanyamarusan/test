@@ -14,21 +14,16 @@ class ContactsExport implements FromCollection, WithHeadings, WithMapping
     * @return \Illuminate\Support\Collection
     */
 
-    protected $request;
+    protected $contacts;
 
-    public function __construct(Request $request)
+    public function __construct($contacts)
     {
-        $this->request = $request;
+        $this->contacts = $contacts;
     }
 
     public function collection()
     {
-        return Contact::with('category')
-            ->KeywordSearch($this->request->keyword)
-            ->GenderSearch($this->request->gender)
-            ->CategorySearch($this->request->category_id)
-            ->DateSearch($this->request->date)
-            ->get();
+        return $this->contacts;
     }
 
     public function headings(): array
@@ -43,11 +38,17 @@ class ContactsExport implements FromCollection, WithHeadings, WithMapping
 
     public function map($contact): array
     {
+        $genderLabels = [
+            1 => '男性',
+            2 => '女性',
+            3 => 'その他',
+        ];
+
         return [
-            $contact->name,
-            $contact->gender,
+            $contact->last_name . ' ' . $contact->first_name,
+            $genderLabels[$contact->gender] ?? '不明',
             $contact->email,
-            $contact->category ? $contact->category->content : '',
+            $contact->category ? $contact->category->content : '未分類',
         ];
     }
 }

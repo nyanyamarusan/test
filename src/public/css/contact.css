@@ -92,6 +92,10 @@ form {
     font-weight: 400;
 }
 
+.form-item__radio {
+    width: 70%;
+}
+
 .form-item__gender {
     width: 70%;
     display: flex;
@@ -185,4 +189,8 @@ textarea {
     color: #FFFFFF;
     background: #82756A;
     border: none;
+}
+
+.error {
+    color: #f00;
 }

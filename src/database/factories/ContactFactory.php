@@ -17,7 +17,7 @@ class ContactFactory extends Factory
      */
     public function definition(): array
     {
-        $faker = Faker::create('ja_JP');
+        $faker = \Faker\Factory::create('ja_JP');
 
         return [
             'first_name' => $faker->firstName,

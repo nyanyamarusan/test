@@ -22,18 +22,28 @@ class ContactController extends Controller
             'first_name',
             'gender',
             'email',
-            'tel',
+            'tel1',
+            'tel2',
+            'tel3',
             'address',
             'building',
-            'content',
+            'category_id',
             'detail',
         ]);
+        $contact['tel'] = $request->tel1 . $request->tel2 . $request->tel3;
+        $genderLabels = [
+            1 => '男性',
+            2 => '女性',
+            3 => 'その他',
+        ];
+        $contact['gender_label'] = $genderLabels[$request->gender] ?? '未設定';
         $categoryContent = Category::find($request->category_id)->content;
+        $categoryId = $request->category_id;
 
-        return view('confirm', compact('contact', 'categoryContent'));
+        return view('confirm', compact('contact', 'categoryContent', 'categoryId'));
     }
 
-    public function store(ContactRequest $request)
+    public function store(Request $request)
     {
         $contact = $request->only([
             'last_name',
@@ -43,12 +53,16 @@ class ContactController extends Controller
             'tel',
             'address',
             'building',
-            'content',
+            'category_id',
             'detail',
         ]);
-        $categoryContent = Category::find($request->category_id)->content;
+        $contact['gender'] = match($contact['gender']) {
+            '男性' => 1,
+            '女性' => 2,
+            'その他' => 3,
+        };
         Contact::create($contact);
 
-        return view('thanks', compact('contact', 'categoryContent'));
+        return view('thanks', compact('contact'));
     }
 }

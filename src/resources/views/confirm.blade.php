@@ -28,15 +28,23 @@
                         <table>
                             <tr>
                                 <th>お名前</th>
-                                <td><input type="text" name="name" value="{{ $contact['last_name'] }} {{ $contact['first_name'] }}" readonly></td>
+                                <td>
+                                    <input type="text" name="name" value="{{ $contact['last_name'] }} {{ $contact['first_name'] }}" readonly>
+                                    <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
+                                    <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
+                                </td>
                             </tr>
                             <tr>
                                 <th>性別</th>
-                                <td><input type="text" name="gender" value="{{ $contact->gender_label }}" readonly></td>
+                                <td><input type="text" name="gender" value="{{ $contact['gender_label'] }}" readonly></td>
                             </tr>
                             <tr>
                                 <th>メールアドレス</th>
                                 <td><input type="email" name="email" value="{{ $contact['email'] }}" readonly></td>
+                            </tr>
+                            <tr>
+                                <th>電話番号</th>
+                                <td><input type="tel" name="tel" value="{{ $contact['tel'] }}" readonly></td>
                             </tr>
                             <tr>
                                 <th>住所</th>
@@ -48,7 +56,10 @@
                             </tr>
                             <tr>
                                 <th>お問い合わせの種類</th>
-                                <td><input type="text" name="category_id" value="{{ $categoryContent }}" readonly></td>
+                                <td>
+                                    <input type="text" name="category_id" value="{{ $categoryContent }}" readonly>
+                                    <input type="hidden" name="category_id" value="{{ $categoryId }}">
+                                </td>
                             </tr>
                             <tr>
                                 <th>お問い合わせ内容</th>

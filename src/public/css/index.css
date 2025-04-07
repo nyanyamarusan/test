@@ -16,46 +16,44 @@
 }
 
 .search-form__item-input {
-    background: #FBFBFB;
+    background: #fbfbfb;
     height: 100%;
     padding: 3px 20px;
     width: 100%;
-    font-family: 'Inika';
-    color: #BEB1A6;
+    font-family: "Inika";
+    color: #beb1a6;
     font-size: 16px;
     font-weight: 400;
-    border: 1px solid #E0DFDE;
+    border: 1px solid #e0dfde;
 }
-
 
 .select__gender,
 .select__category,
 .select__date {
     position: relative;
-
 }
 
 .form-control {
     height: 100%;
     width: 100%;
-    background: #F4F4F4;
+    background: #f4f4f4;
     border: none;
     padding: 0 20px;
     appearance: none;
-    font-family: 'Inika';
-    color: #8B7969;
+    font-family: "Inika";
+    color: #8b7969;
     font-size: 17px;
     font-weight: 400;
-    border: 1px solid #E0DFDE;
+    border: 1px solid #e0dfde;
 }
 
 .select__gender::after,
 .select__category::after,
 .select__date::after {
-    content: '▼';
+    content: "▼";
     width: 17.22px;
     height: 20px;
-    color: #E0DFDE;
+    color: #e0dfde;
     position: absolute;
     right: 15px;
     top: 50%;
@@ -65,7 +63,6 @@
 input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
-
 
 .select__category {
     width: 19%;
@@ -81,7 +78,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 button {
-    font-family: 'Inika';
+    font-family: "Inika";
     font-weight: 400;
     font-size: 18px;
     width: 100%;
@@ -89,15 +86,15 @@ button {
 }
 
 .search-button__submit {
-    border: 1px solid #8B7969;
-    background: #8B7969;
-    color: #FFFFFF;
+    border: 1px solid #8b7969;
+    background: #8b7969;
+    color: #ffffff;
 }
 
 .reset-button__reset {
-    border: 1px solid #D9C6B5;
-    background: #D9C6B5;
-    color: #FFFFFF;
+    border: 1px solid #d9c6b5;
+    background: #d9c6b5;
+    color: #ffffff;
 }
 
 .export-pagination {
@@ -118,7 +115,7 @@ button {
 .export-button {
     padding: 8px 20px;
     background: rgba(225, 219, 214, 0.6);
-    color: #8B7969;
+    color: #8b7969;
     border: none;
 }
 
@@ -138,19 +135,19 @@ div[role="status"] {
     justify-content: center;
     text-decoration: none;
     font-size: 18px;
-    color: #8B7969;
-    border: 1px solid #E0DFDE;
-    background: #FFFFFF;
+    color: #8b7969;
+    border: 1px solid #e0dfde;
+    background: #ffffff;
     transition: 0.3s;
-    font-family: 'Inika';
+    font-family: "Inika";
     width: 32px;
     height: 31px;
     font-weight: 400;
 }
 
 .pagination li.active a {
-    background: #8B7969;
-    color: #FFFFFF;
+    background: #8b7969;
+    color: #ffffff;
 }
 
 .result-content {
@@ -160,7 +157,7 @@ div[role="status"] {
 
 .result-table {
     width: 80%;
-    border: 1px solid #E0DFDE;
+    border: 1px solid #e0dfde;
     font-size: 20px;
 }
 
@@ -169,7 +166,7 @@ table {
 }
 
 .result-table__row:first-of-type {
-    background: #8B7969;
+    background: #8b7969;
 }
 
 .result-table__item:first-of-type {
@@ -182,7 +179,7 @@ table {
 
 .result-table__item {
     font-weight: 700;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: left;
     padding: 20px 0;
 }
@@ -197,9 +194,9 @@ table {
 
 .result-table__item-content {
     padding: 20px 0;
-    background: #FFFFFF;
+    background: #ffffff;
     font-weight: 400;
-    border-bottom: 1px solid #E0DFDE;
+    border-bottom: 1px solid #e0dfde;
     text-align: left;
 }
 
@@ -210,11 +207,11 @@ table {
 .button-info {
     border: 1px solid rgba(217, 198, 181, 0.6);
     background: rgba(244, 244, 244, 0.3);
-    color: #D9C6B5;
+    color: #d9c6b5;
     font-size: 18px;
     font-weight: 400;
     padding: 8px 20px;
-    font-family: 'Inika';
+    font-family: "Inika";
     width: 70%;
 }
 
@@ -223,7 +220,7 @@ table {
     justify-content: center;
     width: 100%;
     height: 100%;
-    border: 1px solid #8B7969;
+    border: 1px solid #8b7969;
 }
 
 .modal-header {
@@ -232,37 +229,39 @@ table {
 }
 
 .close {
-    border-radius: 100px;
-    border: 1px solid #8B7969;
-    color: #8B7969;
-    background: #FFFFFF;
-    font-family: 'Inika';
+    border-radius: 50%;
+    border: 1px solid #8b7969;
+    color: #8b7969;
+    background: #ffffff;
+    font-family: "Inika";
     font-size: 30px;
     font-weight: 400;
     width: 40px;
-
+    cursor: pointer;
 }
 
 .modal-body {
     padding: 20px 50px;
-    text-align: left;
 }
 
 .modal-table__item {
     padding-bottom: 35px;
+    text-align: left;
+    vertical-align: top;
     width: 40%;
     font-size: 20px;
     font-weight: 700;
-    color: #8B7969;
-
+    color: #8b7969;
 }
 
-.model-table__item-content {
+.modal-table__item-content {
     padding-bottom: 35px;
+    text-align: left;
+    vertical-align: top;
     width: 60%;
     font-size: 20px;
     font-weight: 400;
-    color: #8B7969;
+    color: #8b7969;
 }
 
 .delete-button {
@@ -274,11 +273,11 @@ table {
 .delete-button__submit {
     width: 76px;
     padding: 8px 20px;
-    background-color: #BA370D;
-    font-family: 'Inika';
+    background-color: #ba370d;
+    font-family: "Inika";
     font-weight: 400;
     font-size: 18px;
-    color: #FFFFFF;
+    color: #ffffff;
     border: none;
 }
 

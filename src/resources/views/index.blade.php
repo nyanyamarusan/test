@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="form-content">
-    <form method="GET" action="/admin" class="search-form">
+    <form method="GET" action="/admin/search" class="search-form">
         @csrf
         <div class="search-form__item">
             <input type="text" name="keyword" class="search-form__item-input" placeholder="名前やメールアドレスを入力してください" value="{{ old('keyword') }}">
@@ -18,9 +18,9 @@
             <select name="gender" class="form-control">
                 <option value="">性別</option>
                 <option value="all">全て</option>
-                <option value="male">男性</option>
-                <option value="female">女性</option>
-                <option value="other">その他</option>
+                <option value="男性" {{ request('gender') == '男性' ? 'selected' : '' }}>男性</option>
+                <option value="女性" {{ request('gender') == '女性' ? 'selected' : '' }}>女性</option>
+                <option value="その他" {{ request('gender') == 'その他' ? 'selected' : '' }}>その他</option>
             </select>
         </div>
         <div class="select__category">
@@ -45,8 +45,12 @@
 
 <div class="export-pagination">
     <div class="export-pagination__item">
-        <form method="GET" action="admin/export">
+        <form method="GET" action="{{ route('export') }}">
             @csrf
+            <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+            <input type="hidden" name="gender" value="{{ request('gender') }}">
+            <input type="hidden" name="category_id" value="{{ request('category_id') }}">
+            <input type="hidden" name="date" value="{{ request('date') }}">
             <button class="export-button" type="submit">エクスポート</button>
         </form>
         <div class="pagination">
@@ -93,7 +97,7 @@
             <div class="modal-header">
                 <form method="GET" action="/admin" class="close-form">
                     @csrf
-                    <button type="submit" class="close" name="detail_id">&times;</button>
+                    <button type="submit" class="close" name="detail_id">×</button>
                 </form>
             </div>
             <div class="modal-body" id="modalBody">
@@ -104,7 +108,7 @@
                     </tr>
                     <tr class="model-table__row">
                         <th class="modal-table__item">性別</th>
-                        <td class="modal-table__item-content">{{ $detail['gender'] }}</td>
+                        <td class="modal-table__item-content">{{ $genderLabels[$detail['gender']] }}</td>
                     </tr>
                     <tr class="model-table__row">
                         <th class="modal-table__item">電話番号</th>

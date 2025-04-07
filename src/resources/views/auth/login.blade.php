@@ -15,6 +15,7 @@
 @section('title','Login')
 
 @section('content')
+
 <div class="form">
     <form method="POST" action="/login">
         @csrf

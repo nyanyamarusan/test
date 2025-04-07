@@ -40,17 +40,6 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.login');
         });
 
-        Fortify::authenticateUsing(function (UserRequest $request) {
-            if (Auth::attempt([
-                'email' => $request->email,
-                'password' => $request->password,
-            ], $request->boolean('remember'))) {
-                return Auth::user();
-            }
-
-            return null;
-        });
-
         RateLimiter::for('login', function (Request $request) {
             $email = (string) $request->email;
 

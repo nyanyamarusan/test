@@ -21,28 +21,26 @@ class Contact extends Model
         'detail',
     ];
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public static $genderLabels = [
         1 => '男性',
         2 => '女性',
         3 => 'その他',
     ];
 
-    public function getGenderLabelAttribute()
-    {
-        return self::$genderLabels[$this->gender] ?? '未設定';
-    }
-
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
-
     public function scopeKeywordSearch($query, $keyword)
     {
-        if (!empty($keyword)) {
-            return $query->where('name', 'LIKE', '%' . $keyword . '%')
-                        ->orWhere('email', 'LIKE', '%' . $keyword . '%');
-            }
+    if (!empty($keyword)) {
+        return $query->where(function ($q) use ($keyword) {
+            $q->where('first_name', 'LIKE', '%' . $keyword . '%')
+              ->orWhere('last_name', 'LIKE', '%' . $keyword . '%')
+              ->orWhere('email', 'LIKE', '%' . $keyword . '%');
+        });
+    }
     }
 
     public function scopeGenderSearch($query, $gender)
